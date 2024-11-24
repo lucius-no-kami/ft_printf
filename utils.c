@@ -6,12 +6,11 @@
 /*   By: luluzuri <luluzuri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 19:54:47 by luluzuri          #+#    #+#             */
-/*   Updated: 2024/11/24 14:07:32 by luluzuri         ###   ########.fr       */
+/*   Updated: 2024/11/24 14:21:12 by luluzuri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int	pf_putchar(char c)
 {
@@ -61,7 +60,7 @@ void	pf_puthex(char c, int *count, unsigned long n)
 {
 	int		i;
 	int		tmp;
-	char	result[50];
+	char	result[256];
 
 	i = 0;
 	if (n == 0)

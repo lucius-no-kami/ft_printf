@@ -6,13 +6,11 @@
 /*   By: luluzuri <luluzuri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 14:54:54 by luluzuri          #+#    #+#             */
-/*   Updated: 2024/11/24 14:09:18 by luluzuri         ###   ########.fr       */
+/*   Updated: 2024/11/24 14:19:50 by luluzuri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
-#include <limits.h>
 
 static int	handle_format(const char *str, int *count, va_list args, int i)
 {
@@ -58,13 +56,4 @@ int	ft_printf(const char *format, ...)
 	parse_arguments(format, &count_char, args);
 	va_end(args);
 	return (count_char);
-}
-
-int	main(void)
-{
-	long	test;
-
-	printf("Taille de renvois: %d \n", printf("Test adresse: %p \n", 0));
-	printf("Taille de renvois: %d \n", ft_printf("Test adresse: %p \n", 0));
-	return (0);
 }
